@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Séminaire data
+</title>
+<meta name="description"
+content="Séminaire Data · Document · Médiation du laboratoire Dicen. 20 novembre 2026 au Cnam et en visioconférence. Deux interventions autour du Libre, des environnements d'écriture et des infrastructures de publication scientifique.">
+<meta name="author" content="Dicen">
+<meta property="og:type" content="event">
+<meta property="og:title"
+content="Écriture et circulation des savoirs scientifiques : quelles reconfigurations ?">
+<meta property="og:description" content="Le Libre, les environnements d'écriture et les infrastructures de circulation des savoirs scientifiques.">
+<meta property="og:locale" content="fr_FR">
+<!-- JSON-LD : description structurée de l'événement -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.dicen-idf.fr/#organization",
+      "name": "Dicen-IdF",
+      "alternateName": "Dispositifs d'Information et de Communication à l'Ère Numérique","url": "https://www.dicen.org/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://revue30.org/#organization",
+      "name": "Revue 3.0",
+      "url": "https://revue30.org/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cv.hal.science/asegault#person",
+      "name": "Antonin Segault",
+      "url": "https://cv.hal.science/asegault",
+      "jobTitle": "Maître de conférences en Sciences de l'information et de la communication",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Université Paris Nanterre"
+      },
+      "memberOf": {
+        "@id": "https://www.dicen-idf.fr/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Roch Delannay",
+      "jobTitle": "Directeur de l'Infrastructure de recherche Métopes",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "MRSH Normandie – Université de Caen Normandie"
+        },
+        {
+          "@id": "https://www.dicen-idf.fr/#organization"
+        },
+        {
+          "@id": "https://revue30.org/#organization"
+        }
+      ]
+    },
+    {
+      "@type": "Event",
+      "@id": "#seminaire-2026-11-20",
+      "name":
+        "Écriture et circulation des savoirs scientifiques : quelles reconfigurations ?",
+      "description":
+        "Séminaire de la thématique Data · Document · Médiation du laboratoire Dicen-IdF. Deux interventions consacrées aux transformations de l'écriture, de l'édition et de la circulation des savoirs scientifiques. Le Libre constitue le fil conducteur de cette rencontre : autonomie numérique, logiciels libres, formats ouverts, décentralisation, interopérabilité et maîtrise des infrastructures scientifiques.",
+      "startDate": "2026-11-20T14:30:00+01:00",
+      "endDate": "2026-11-20T17:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode":
+        "https://schema.org/MixedEventAttendanceMode",
+      "inLanguage": "fr",
+      "keywords": [
+        "Logiciels libres",
+        "Libre",
+        "Humanités numériques",
+        "Édition scientifique",
+        "Écriture numérique",
+        "Formats ouverts",
+        "Interopérabilité",
+        "Médias sociaux",
+        "Infrastructures numériques",
+        "Science ouverte",
+        "Circulation des savoirs",
+        "Autonomie numérique"
+      ],
+      "organizer": {
+        "@id": "https://www.dicen.org/#organization"
+      },
+      "location": [
+        {
+          "@type": "Place",
+          "name": "Conservatoire national des arts et métiers",
+          "address": {
+            "@type": "PostalAddress",
+            "name": "Cnam",
+            "addressLocality": "Paris",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@type": "VirtualLocation",
+          "url": "https://www.dicen.org/"
+        }
+      ],
+      "performer": [
+        {
+          "@id": "https://cv.hal.science/asegault#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Roch Delannay"
+        }
+      ],
+      "contributor": [
+        {
+          "@type": "Person",
+          "name": "Gérald Kembellec"
+        },
+        {
+          "@type": "Person",
+          "name": "Camille Claverie"
+        }
+      ],
+      "subEvent": [
+        {
+          "@type": "Event",
+          "name":
+            "Les écrits scientifiques et les médias sociaux : évolutions récentes",
+          "performer": {
+            "@id": "https://cv.hal.science/asegault#person"
+          }
+        },
+        {
+          "@type": "Event",
+          "name":
+            "Enjeux pour l'édition scientifique : et si on se passait de DOCX ?",
+          "performer": {
+            "@type": "Person",
+            "name": "Roch Delannay"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --ink: #263746;
+  --accent: #287b78;
+  --light: #eef4f2;
+  --border: #d8e2df;
+  --muted: #64747d;
+}
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  line-height: 1.7;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+h1, h2, h3 {
+  line-height: 1.3;
+}
+h1 {
+  font-size: 2.3rem;
+  margin-bottom: .5rem;
+}
+h2 {
+  color: var(--accent);
+  margin-top: 2.5rem;
+}
+h3 {
+  margin-bottom: .3rem;
+}
+a {
+  color: var(--accent);
+}
+.header {
+  border-bottom: 4px solid var(--accent);
+  padding-bottom: 1.5rem;
+}
+.theme {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.highlight {
+  background: var(--light);
+  border-left: 5px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.session {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+.time {
+  color: var(--accent);
+  font-weight: 700;
+}
+.speaker {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.question {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.practical {
+  background: var(--light);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: .9rem;
+  color: var(--muted);
+}
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+</style>
+</head>
+<body>
+<main>
+<header class="header">
+<p class="theme">
+Séminaire · Data · Document · Médiation
+</p>
+<h1>
+Écriture et circulation des savoirs scientifiques : quelles reconfigurations ?
+</h1>
+<p class="subtitle">
+Laboratoire Dicen-IdF · 20 novembre 2026
+</p>
+</header>
+<section aria-labelledby="presentation">
+<h2 id="presentation">Présentation</h2>
+<img src="logo-seminaire-20-11-26.png">
+<p>
+
+Les transformations des environnements numériques
+
+interrogent en profondeur les formes de production,
+
+d'écriture, d'édition et de circulation des savoirs
+
+scientifiques. Des médias sociaux aux chaînes éditoriales,
+
+des plateformes collaboratives aux formats documentaires,
+
+les dispositifs techniques participent pleinement à la
+
+fabrique des connaissances et à leur mise en circulation.
+
+</p>
+
+<p>
+
+Écrire, publier et diffuser la recherche ne relèvent pas
+
+uniquement de pratiques intellectuelles ou éditoriales.
+
+Ces activités s'inscrivent dans des environnements
+
+techniques qui influencent les formes d'expression,
+
+organisent les interactions et conditionnent les possibilités
+
+de circulation des contenus.
+
+</p>
+
+<div class="highlight">
+
+<h2>Le Libre : une condition de l'autonomie scientifique ?</h2>
+
+<p>
+
+Dans ce contexte, le <strong>Libre</strong> constitue un
+
+enjeu transversal, à la fois technique, documentaire,
+
+politique et épistémologique.
+
+</p>
+
+<p>
+
+Le choix des logiciels d'écriture, des formats documentaires,
+
+des plateformes de diffusion et des infrastructures de
+
+publication engage directement la capacité des communautés
+
+scientifiques à maîtriser leurs propres environnements de
+
+travail. Logiciels libres, formats ouverts, interopérabilité,
+
+décentralisation et transparence constituent autant de
+
+leviers pour préserver cette autonomie.
+
+</p>
+
+<p>
+
+Les environnements numériques ne sont pas de simples
+
+supports neutres : ils participent à façonner les contenus,
+
+les modalités de production des connaissances et leurs
+
+conditions de visibilité et de circulation.
+
+</p>
+
+<p class="question">
+
+La maîtrise des infrastructures techniques est-elle une
+
+condition de l'autonomie intellectuelle et éditoriale
+
+des communautés scientifiques ?
+
+</p>
+
+</div>
+
+<p>
+
+Cette séance propose de mettre en discussion ces enjeux
+
+à travers deux interventions complémentaires : l'une
+
+consacrée aux espaces numériques de circulation des écrits
+
+scientifiques, l'autre aux environnements techniques
+
+d'écriture et aux infrastructures de l'édition scientifique.
+
+</p>
+
+</section>
+
+<section aria-labelledby="programme">
+
+<h2 id="programme">Programme</h2>
+
+<article class="session">
+
+<p class="time">14h30 · Accueil et introduction</p>
+
+</article>
+
+<article class="session">
+
+<p class="time">14h45 · Intervention 1</p>
+
+<p class="speaker">Antonin Segault</p>
+
+<p>
+
+Maître de conférences en Sciences de l'information et
+
+de la communication à l'Université Paris Nanterre,
+
+chercheur au laboratoire Dicen-IdF.
+
+</p>
+
+<h3>
+
+Les écrits scientifiques et les médias sociaux :
+
+évolutions récentes
+
+</h3>
+
+<p>
+
+Spécialiste de la circulation des savoirs et des plateformes
+
+collaboratives, Antonin Segault étudie les dynamiques
+
+collectives du Web, de Wikipédia à la communication de
+
+crise, sujet auquel il a consacré sa thèse de doctorat.
+
+Il codirige également les Modules Innovants Pédagogiques,
+
+un projet d'exploration numérique conduit en partenariat
+
+avec l'INA autour de l'analyse de grands jeux de données
+
+audiovisuelles.
+
+</p>
+
+<p>
+
+Particulièrement engagé dans l'écoconception numérique
+
+et la transparence des plateformes, il inscrit ses pratiques
+
+dans une démarche de sobriété et d'autonomie numérique.
+
+Sa présence en ligne en témoigne : il privilégie les réseaux
+
+sociaux décentralisés, notamment Mastodon, et un site
+
+personnel minimaliste, sans traceurs ni intelligence
+
+artificielle.
+
+</p>
+
+<p>
+
+Son intervention abordera les évolutions récentes des
+
+pratiques d'écriture et de diffusion scientifiques sur les
+
+médias sociaux. Elle permettra d'interroger les
+
+transformations des modes de visibilité et de circulation
+
+des connaissances, mais également les enjeux de
+
+décentralisation, de transparence et de maîtrise des
+
+environnements numériques dans lesquels s'inscrivent
+
+aujourd'hui les communautés scientifiques.
+
+</p>
+
+<p>
+
+<a href="https://cv.hal.science/asegault">
+
+Consulter le profil scientifique d'Antonin Segault
+
+</a>
+
+</p>
+
+</article>
+
+<article class="session">
+
+<p class="time">15h30 · Intervention 2</p>
+
+<p class="speaker">Roch Delannay</p>
+
+<p>
+
+Directeur de l'Infrastructure de recherche Métopes
+
+(MRSH Normandie – Université de Caen Normandie),
+
+membre du laboratoire Dicen-IdF et du projet
+
+<a href="https://revue30.org/">Revue 3.0</a>.
+
+</p>
+
+<h3>
+
+Enjeux pour l'édition scientifique :
+
+et si on se passait de DOCX ?
+
+</h3>
+
+<p>
+
+Docteur en sciences de l'information et de la communication
+
+(Université Paris Nanterre) et en littératures et langues
+
+du monde, spécialité humanités numériques
+
+(Université de Montréal), dans le cadre d'une cotutelle
+
+internationale soutenue en novembre 2025, Roch Delannay
+
+consacre ses recherches aux relations entre environnements
+
+d'écriture numérique et production du sens.
+
+</p>
+
+<p>
+
+Son intervention interrogera la place occupée par les outils
+
+bureautiques conventionnels, et notamment le format DOCX,
+
+dans les pratiques contemporaines de l'édition scientifique.
+
+Derrière le choix d'un logiciel ou d'un format se jouent
+
+des questions fondamentales : comment les environnements
+
+techniques influencent-ils la forme et la structuration
+
+des textes ? Quelles possibilités offrent les chaînes
+
+éditoriales fondées sur des formats ouverts et des outils
+
+libres ? Comment reprendre la maîtrise des processus de
+
+production, de transformation et de diffusion des
+
+publications scientifiques ?
+
+</p>
+
+<p>
+
+Cette réflexion rejoint les travaux développés dans le cadre
+
+de l'Infrastructure de recherche Métopes et du projet
+
+<a href="https://revue30.org/">Revue 3.0</a>, qui participent
+
+à la réflexion collective sur les transformations des
+
+pratiques et des infrastructures de l'édition scientifique.
+
+</p>
+
+</article>
+
+<article class="session">
+
+<p class="time">16h15 · Discussion collective</p>
+
+<p>
+
+Les deux interventions permettront d'engager une discussion
+
+transversale sur les transformations de l'écosystème de la
+
+publication scientifique : autonomie des communautés
+
+de recherche, maîtrise des infrastructures numériques,
+
+choix des environnements d'écriture, formats ouverts,
+
+interopérabilité et circulation des connaissances.
+
+</p>
+
+</article>
+
+</section>
+
+<section aria-labelledby="enjeux">
+
+<h2 id="enjeux">Produire et faire circuler librement les savoirs</h2>
+
+<p>
+
+De l'environnement d'écriture aux espaces de circulation,
+
+les infrastructures numériques façonnent les conditions
+
+de production et de partage des savoirs scientifiques.
+
+</p>
+
+<p>
+
+Qu'il s'agisse de choisir ses outils d'écriture, de structurer
+
+ses publications ou de maîtriser ses espaces de diffusion,
+
+la question du Libre traverse ces différentes dimensions.
+
+Elle renvoie à un enjeu fondamental pour les sciences de
+
+l'information et de la communication et les humanités
+
+numériques : celui de l'autonomie des communautés
+
+scientifiques face aux environnements techniques qui
+
+conditionnent leurs pratiques.
+
+</p>
+
+<p>
+
+Le Libre ne se réduit ainsi pas à une question de licence
+
+logicielle ou de coût d'accès. Il engage une réflexion plus
+
+large sur les possibilités de comprendre, d'utiliser,
+
+d'adapter, de transformer et de partager les outils et les
+
+infrastructures de production scientifique.
+
+</p>
+
+<p>
+
+Cette séance propose d'en discuter, en considérant les
+
+dispositifs techniques non comme de simples supports,
+
+mais comme des composantes à part entière de
+
+l'organisation et de la circulation des connaissances.
+
+</p>
+
+</section>
+
+<section class="practical" aria-labelledby="pratique">
+
+<h2 id="pratique">Informations pratiques</h2>
+
+<ul>
+
+<li><strong>Date :</strong> vendredi 20 novembre 2026</li>
+
+<li><strong>Horaires :</strong> 14h30 – 17h00</li>
+
+<li><strong>Lieu :</strong> Conservatoire national des arts
+
+et métiers (Cnam), Paris – salle à préciser</li>
+
+<li><strong>Format :</strong> hybride (présentiel et visioconférence)</li>
+
+<li><strong>Animation :</strong> Gérald Kembellec et Camille Claverie</li>
+
+<li><strong>Organisation :</strong> Thématique
+
+Data · Document · Médiation, laboratoire Dicen-IdF</li>
+
+</ul>
+
+<p>
+
+Les informations relatives à la visioconférence seront
+
+communiquées ultérieurement.
+
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+
+Séminaire de recherche de la thématique
+
+<strong>Data · Document · Médiation</strong><br>
+
+Laboratoire Dicen-IdF
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
